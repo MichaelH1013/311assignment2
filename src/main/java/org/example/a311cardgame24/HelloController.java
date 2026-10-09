@@ -287,34 +287,41 @@ public class HelloController {
         alert.showAndWait();
     }
 
+    // This class stores one real card using its value and its suit.
     private static class Card {
         private final int value;
         private final String suit;
 
+        // Stores a card's rank and suit together.
         private Card(int value, String suit) {
             this.value = value;
             this.suit = suit;
         }
     }
 
+    // This class stores a number and the expression text that created it.
     private static class ExpressionNode {
         private final double value;
         private final String text;
 
+        // Saves the current value and its matching expression string.
         private ExpressionNode(double value, String text) {
             this.value = value;
             this.text = text;
         }
     }
 
+    // This parser reads a math expression and calculates its result.
     private static class ExpressionParser {
         private final String expression;
         private int index;
 
+        // Saves the expression that will be evaluated.
         private ExpressionParser(String expression) {
             this.expression = expression;
         }
 
+        // Starts parsing and makes sure the whole expression was used.
         private double parse() {
             double value = parseExpression();
             if (index != expression.length()) {
@@ -323,6 +330,7 @@ public class HelloController {
             return value;
         }
 
+        // Parses addition and subtraction.
         private double parseExpression() {
             double value = parseTerm();
             while (index < expression.length()) {
@@ -338,6 +346,7 @@ public class HelloController {
             return value;
         }
 
+        // Parses multiplication and division.
         private double parseTerm() {
             double value = parseFactor();
             while (index < expression.length()) {
@@ -360,6 +369,7 @@ public class HelloController {
             return value;
         }
 
+        // Handles positive and negative numbers.
         private double parseFactor() {
             if (index < expression.length() && (expression.charAt(index) == '+' || expression.charAt(index) == '-')) {
                 char sign = expression.charAt(index++);
@@ -369,6 +379,7 @@ public class HelloController {
             return parsePrimary();
         }
 
+        // Reads a number or a parenthesized expression.
         private double parsePrimary() {
             if (index >= expression.length()) {
                 throw new IllegalArgumentException("Unexpected end of expression");
