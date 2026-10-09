@@ -1,0 +1,88 @@
+/* This sets the base background and spacing for the whole app. */
+.root {
+    -fx-background-color: #e9e9e9;
+    -fx-padding: 18;
+}
+
+/* This styles the main game box and centers its contents. */
+.game-pane {
+    -fx-alignment: center;
+    -fx-spacing: 16;
+    -fx-background-color: #e9e9e9;
+}
+
+/* This keeps the top row of controls lined up in a row. */
+.header-row {
+    -fx-alignment: center-left;
+    -fx-spacing: 12;
+}
+
+/* This gives the title text a bold, readable look. */
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d2d2d;
+}
+
+/* This styles the field where the found solution is shown. */
+.expression-field {
+    -fx-pref-width: 180;
+    -fx-font-size: 17px;
+    -fx-background-color: white;
+    -fx-border-color: #a9a9a9;
+    -fx-border-radius: 5;
+}
+
+/* This gives the top buttons a simple neutral look. */
+.action-button {
+    -fx-pref-width: 85;
+    -fx-background-color: #d9d9d9;
+    -fx-text-fill: #1f1f1f;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+}
+
+/* This changes the button color when the mouse hovers over it. */
+.action-button:hover {
+    -fx-background-color: #c6c6c6;
+}
+
+/* This centers the card images with a little spacing between them. */
+.card-row {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+/* This keeps the input row for the expression and verify button aligned. */
+.input-row {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+/* This makes the label text easy to read. */
+.input-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2d2d2d;
+}
+
+/* This styles the player input field for the expression. */
+.input-expression {
+    -fx-pref-width: 210;
+    -fx-font-size: 17px;
+    -fx-background-color: white;
+    -fx-border-color: #a9a9a9;
+    -fx-border-radius: 5;
+}
+
+/* This gives the verify button a blue highlight to stand out. */
+.verify-button {
+    -fx-pref-width: 90;
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* This makes the verify button darker when the mouse is over it. */
+.verify-button:hover {
+    -fx-background-color: #357ad8;
+}
